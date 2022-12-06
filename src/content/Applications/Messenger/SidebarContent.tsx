@@ -125,19 +125,6 @@ function SidebarContent() {
   return (
     <RootWrapper>
       <Box display="flex" alignItems="flex-start">
-        <Box display="flex" pb={1} mt={4} alignItems="center">
-          <Typography
-            sx={{
-              mr: 1
-            }}
-            variant="h3"
-          >
-            Meetings
-          </Typography>
-          <Label color="success">
-            <b>2</b>
-          </Label>
-        </Box>
         <Avatar alt={user.name} src={user.avatar} />
         <Box
           sx={{
@@ -224,6 +211,20 @@ function SidebarContent() {
           ))}
         </Tabs>
       </TabsContainerWrapper>
+
+      <Box display="flex" pb={1} mt={4} alignItems="center">
+        <Typography
+          sx={{
+            mr: 1
+          }}
+          variant="h3"
+        >
+          Users
+        </Typography>
+        <Label color="success">
+          <b>2</b>
+        </Label>
+      </Box>
 
       <Box mt={2}>
         {currentTab === 'all' && (
@@ -406,7 +407,7 @@ function SidebarContent() {
           }}
           variant="h3"
         >
-          Meetings
+          Groups
         </Typography>
         <Label color="success">
           <b>2</b>
