@@ -114,8 +114,8 @@ function SidebarContent() {
 
   const tabs = [
     { value: 'all', label: 'All' },
-    { value: 'unread', label: 'Unread' },
-    { value: 'archived', label: 'Archived' }
+    { value: 'users', label: 'Users' },
+    { value: 'groups', label: 'Groups' }
   ];
 
   const handleTabsChange = (_event: ChangeEvent<{}>, value: string): void => {
@@ -125,6 +125,19 @@ function SidebarContent() {
   return (
     <RootWrapper>
       <Box display="flex" alignItems="flex-start">
+        <Box display="flex" pb={1} mt={4} alignItems="center">
+          <Typography
+            sx={{
+              mr: 1
+            }}
+            variant="h3"
+          >
+            Meetings
+          </Typography>
+          <Label color="success">
+            <b>2</b>
+          </Label>
+        </Box>
         <Avatar alt={user.name} src={user.avatar} />
         <Box
           sx={{
