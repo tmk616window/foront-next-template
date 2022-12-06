@@ -1,25 +1,8 @@
-import { useState } from 'react';
-import {
-  Box,
-  Typography,
-  Hidden,
-  Container,
-  Button,
-  Grid,
-  styled
-} from '@mui/material';
+import { Box, Typography, Container, styled } from '@mui/material';
 import type { ReactElement } from 'react';
 import BaseLayout from 'src/layouts/BaseLayout';
 
 import Head from 'next/head';
-import RefreshTwoToneIcon from '@mui/icons-material/RefreshTwoTone';
-import LoadingButton from '@mui/lab/LoadingButton';
-
-const GridWrapper = styled(Grid)(
-  ({ theme }) => `
-    background: ${theme.colors.gradients.blue5};
-`
-);
 
 const MainContent = styled(Box)(
   () => `
@@ -33,24 +16,7 @@ const MainContent = styled(Box)(
 `
 );
 
-const TypographyPrimary = styled(Typography)(
-  ({ theme }) => `
-      color: ${theme.colors.alpha.white[100]};
-`
-);
-
-const TypographySecondary = styled(Typography)(
-  ({ theme }) => `
-      color: ${theme.colors.alpha.white[70]};
-`
-);
-
 function Status500() {
-  const [pending, setPending] = useState(false);
-  function handleClick() {
-    setPending(true);
-  }
-
   return (
     <>
       <Head>
